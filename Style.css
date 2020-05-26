@@ -1,0 +1,176 @@
+﻿
+/* VARIABLES BELOW */
+
+:root {
+    --bg:     rgb(245,245,245);
+    --light:  rgb(230,230,230);
+    --dark:   rgb(70 ,70 ,70 );
+    --accent: rgb(120,150,200);
+}
+
+/* ELEMENT TAGS BELOW */
+
+body{
+    padding: 0;
+    margin:0;
+    background-color: var(--bg);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: justify;
+}
+
+main {
+    padding: .5vw;
+}
+
+div {
+    margin: .5vw;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 30px;
+    letter-spacing: 4px;
+    height: 30px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    height: 24px;
+    margin: 0 0 30px 0;
+}
+
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 7vw;
+    position: relative;
+    bottom: 0;
+    width: calc( 100% - 14vw );
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed
+}
+
+th, td {
+    padding: 15px;
+}
+
+/* CLASS TAGS BELOW */
+
+.dark {
+    background-color: var(--dark);
+    color: white;
+}
+
+.light {
+    background-color: var(--light);
+    color: black;
+}
+
+.round {
+    border-radius: 10px;
+}
+
+.btn {
+    display: block;
+    flex: 1;
+    padding: 20px;
+    margin: 3px;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    letter-spacing: 2.2px;
+    background-color: var(--accent);
+    transition-duration: 0.2s;
+    color:white;
+}
+
+.card {
+    margin: .5vw;
+    padding: calc( 1vw + 10px );
+    background-color: white;
+}
+
+.h-container, .v-container, .img-container {
+    display: flex;
+    margin: 0;
+}
+
+.h-container {
+    flex-direction: row;
+}
+
+.v-container {
+    flex-direction: column;
+}
+
+.img-container {
+    align-items: center;
+    justify-content: center;
+}
+
+/* ID TAGS BELOW */
+
+#box-1 {
+    flex: 3;
+    order: 2;
+}
+
+#box-2 {
+    flex: 1;
+    order: 1;
+}
+
+#btn-1 {
+    flex:3;
+}
+
+#center {
+    flex: 2;
+}
+
+#right {
+    flex: 1;
+    height:auto;
+}
+
+#nav a.btn{
+    text-align:center;
+    margin:0;
+}
+
+@media only screen and (max-width: 900px) {
+    #box-1 {
+        flex: 1;
+        order: 1;
+    }
+
+    #box-2 {
+        flex: 1;
+        order: 2;
+    }
+
+    .h-container {
+        flex-direction: column;
+    }
+
+    #nav a.btn {
+        text-align: center;
+        margin: 3px;
+    }
+
+}
